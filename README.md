@@ -1,7 +1,7 @@
 <h1>Portfolio Site</h1>
 
 <p>
-  A modern, customizable developer portfolio built with <strong>React</strong>, <strong>Vite</strong>, and <strong>Tailwind CSS</strong> (I recommend v3).
+  A modern, customizable developer portfolio for myself built with <strong>React</strong>, <strong>Vite</strong>, and <strong>Tailwind CSS</strong> (I recommend v3).
 </p>
 
 <h2>Features</h2>
@@ -39,9 +39,7 @@ portfolio-site/
 
 <h2>Customization</h2>
 <ul>
-  <li><strong>Colors &amp; Theme:</strong> Edit <code>tailwind.config.js</code> to change colors or extend the theme.</li>
-  <li><strong>Sections:</strong> Add or remove components in <code>src/components/</code> and import them in <code>App.jsx</code>.</li>
-  <li><strong>Content:</strong> Update text, links, and images in each component to reflect your personality and projects.</li>
+  <li><strong>Colors &amp; Theme:</strong> I used <code>tailwind.config.js</code> to edit & change colors or extend the theme.</li>
   <li><strong>Icons:</strong> Uses <a href="https://react-icons.github.io/react-icons/">react-icons</a> for easy icon integration.</li>
 </ul>
 
