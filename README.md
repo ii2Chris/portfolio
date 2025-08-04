@@ -1,10 +1,27 @@
+<p align="center">
+  <img src="https://readme-logos.vercel.app/api?name=Portfolio%20Site&color=blue&background=darkred" alt="Portfolio Site Banner" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
+  <img src="https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" />
+</p>
+
+<hr>
+
+<blockquote>
+  <em>“With great power comes great responsibility.”</em>
+</blockquote>
+
 <h1>Portfolio Site</h1>
 
 <p>
   A modern, customizable developer portfolio for myself built with <strong>React</strong>, <strong>Vite</strong>, and <strong>Tailwind CSS</strong> (I recommend v3).
 </p>
 
-<h2>Features</h2>
+<hr>
+<h2>🚀 Features</h2>
 <ul>
   <li>⚡ Fast Vite-powered React app</li>
   <li>🎨 Tailwind CSS for rapid, responsive styling</li>
@@ -42,6 +59,12 @@ portfolio-site/
   <li><strong>Colors &amp; Theme:</strong> I used <code>tailwind.config.js</code> to edit & change colors or extend the theme.</li>
   <li><strong>Icons:</strong> Uses <a href="https://react-icons.github.io/react-icons/">react-icons</a> for easy icon integration.</li>
 </ul>
+
+<h2>Connect with Me</h2>
+<p>
+  <a href="https://github.com/ii2Chris"><img src="https://img.shields.io/badge/GitHub-ii2Chris-181717?style=flat&logo=github" /></a>
+  <a href="ChrisBudhram03@outlook.com"><img src="https://img.shields.io/badge/Email-Contact-blue?style=flat&logo=gmail" /></a>
+</p>
 
 <h2>Credits</h2>
 <ul>
