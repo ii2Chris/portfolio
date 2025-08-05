@@ -1,52 +1,98 @@
 // src/components/Navbar.jsx
-import { FaHome, FaInfoCircle, FaBriefcase, FaEnvelope } from "react-icons/fa";
+
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
+  const [active, setActive] = useState("about");
+
+  useEffect(() => {
+    function handleScroll() {
+      const aboutSection = document.getElementById("about");
+      const projectsSection = document.getElementById("projects");
+      if (!aboutSection || !projectsSection) return;
+      const aboutRect = aboutSection.getBoundingClientRect();
+      const projectsRect = projectsSection.getBoundingClientRect();
+      if (projectsRect.top <= 100) {
+        setActive((prev) => (prev !== "projects" ? "projects" : prev));
+      } else {
+        setActive((prev) => (prev !== "about" ? "about" : prev));
+      }
+    }
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="flex items-center justify-between bg-zinc-900 px-6 py-3 rounded-b-lg shadow-lg">
-      <div className="flex items-center gap-2 text-white font-bold text-xl">
-        React{" "}
-        <span className="text-blue-400">
-          <FaHome />
-        </span>
-      </div>
-      <ul className="flex items-center gap-4">
-        <li>
-          <a
-            href="#home"
-            className="flex items-center gap-1 px-3 py-1 rounded bg-blue-600 text-white font-medium shadow hover:bg-blue-700 transition"
-          >
-            <FaHome /> Home
-          </a>
-        </li>
-        <li>
+    <nav className="flex flex-col items-start gap-0 py-0 px-0 bg-transparent w-full mb-auto">
+      <ul className="flex flex-col items-start gap-2 w-full">
+        <li className="w-full flex justify-start">
           <a
             href="#about"
-            className="flex items-center gap-1 text-white hover:text-blue-400 transition"
+            onClick={(e) => {
+              e.preventDefault();
+              setActive("about");
+              const section = document.getElementById("about");
+              if (section) {
+                section.scrollIntoView({ behavior: "smooth", block: "start" });
+              }
+            }}
+            className={`group flex items-center py-3 w-full text-left focus:outline-none ${
+              active === "about" ? "text-slate-200" : ""
+            }`}
           >
-            <FaInfoCircle /> About
+            <span
+              className={`nav-indicator mr-4 h-px ${
+                active === "about"
+                  ? "w-16 bg-slate-200"
+                  : "w-8 bg-slate-600 group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 transition-all motion-reduce:transition-none"
+              }`}
+            ></span>
+            <span
+              className={`nav-text text-xs font-bold uppercase tracking-widest ${
+                active === "about"
+                  ? "text-slate-200"
+                  : "text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200"
+              }`}
+            >
+              About
+            </span>
           </a>
         </li>
-        <li>
+        <li className="w-full flex justify-start">
           <a
             href="#projects"
-            className="flex items-center gap-1 text-white hover:text-blue-400 transition"
+            onClick={(e) => {
+              e.preventDefault();
+              setActive("projects");
+              const section = document.getElementById("projects");
+              if (section) {
+                section.scrollIntoView({ behavior: "smooth", block: "start" });
+              }
+            }}
+            className={`group flex items-center py-3 w-full text-left focus:outline-none ${
+              active === "projects" ? "text-slate-200" : ""
+            }`}
           >
-            <FaBriefcase /> Projects
+            <span
+              className={`nav-indicator mr-4 h-px ${
+                active === "projects"
+                  ? "w-16 bg-slate-200"
+                  : "w-8 bg-slate-600 group-hover:w-16 group-hover:bg-slate-200 group-focus-visible:w-16 group-focus-visible:bg-slate-200 transition-all motion-reduce:transition-none"
+              }`}
+            ></span>
+            <span
+              className={`nav-text text-xs font-bold uppercase tracking-widest ${
+                active === "projects"
+                  ? "text-slate-200"
+                  : "text-slate-500 group-hover:text-slate-200 group-focus-visible:text-slate-200"
+              }`}
+            >
+              Projects
+            </span>
           </a>
-        </li>
-        <li>
-          <a
-            href="#contact"
-            className="flex items-center gap-1 text-white hover:text-blue-400 transition"
-          >
-            <FaEnvelope /> Contact
-          </a>
-        </li>
-        <li>
-          <button className="ml-2 px-3 py-1 rounded bg-gray-200 text-gray-900 font-semibold hover:bg-gray-300 transition">
-            Sign Up
-          </button>
         </li>
       </ul>
     </nav>
