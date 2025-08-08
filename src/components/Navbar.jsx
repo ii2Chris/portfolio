@@ -26,7 +26,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="flex flex-col items-start gap-0 py-0 px-0 bg-transparent w-full mb-auto">
+    <nav className="flex flex-col items-start gap-0 py-0 px-0 bg-transparent w-full mb-auto border-b border-slate-600 font-mono text-lg" >
       <ul className="flex flex-col items-start gap-2 w-full">
         <li className="w-full flex justify-start">
           <a
