@@ -3,7 +3,6 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 export default function About() {
   return (
     <div className="font-mono">
-      <h2 className="text-3xl font-bold text-slate-100 mb-4">About Me</h2>
       <p className="text-slate-300 max-w-4xl mb-6">
         Hi! I'm Christopher Budhram. I am a recent graduate from{" "}
         <a
