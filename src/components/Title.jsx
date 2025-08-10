@@ -1,8 +1,7 @@
-// src/components/About.jsx
-export default function About() {
+// src/components/Title.jsx
+export default function Title() {
   return (
     <section
-      id="about"
       className="flex flex-col min-h-[60vh] text-center px-4 top-1/2 justify-center "
     >
       <h1 className="text-5xl text-left sm:text-6xl font-mono font-bold text-accent mb-4">
