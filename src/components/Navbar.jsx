@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 
 const navItems = [
@@ -43,9 +42,10 @@ export default function Navbar() {
             href={`#${item.id}`}
             onClick={() => setActive(item.id)} // 🔹 update immediately on click
             className={`transition-colors duration-200 
-                        ${isActive
-                          ? "text-accent drop-shadow-[0_0_8px_rgba(157,170,242,0.8)]"
-                          : "text-slate-300 hover:text-accent hover:drop-shadow-[0_0_8px_rgba(157,170,242,0.6)]"
+                        ${
+                          isActive
+                            ? "text-accent drop-shadow-[0_0_8px_rgba(157,170,242,0.8)]"
+                            : "text-slate-300 hover:text-accent hover:drop-shadow-[0_0_8px_rgba(157,170,242,0.6)]"
                         }`}
           >
             {item.label}
@@ -55,4 +55,3 @@ export default function Navbar() {
     </nav>
   );
 }
-
