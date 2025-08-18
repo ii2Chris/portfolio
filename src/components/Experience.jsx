@@ -10,111 +10,172 @@ export default function ExperienceSection() {
 
       {/* Experience */}
       <div className="space-y-6">
-        <h3 className="text-xl font-semibold">Internships</h3>
-        <article>
-          <header className="flex flex-wrap items-baseline gap-2">
-            <h3 className="text-lg font-medium">
+        <h1 className="text-lg uppercase tracking-wide text-blue-200">
+          Internships
+        </h1>
+
+        <article className="first:border-t-0 border-t border-white/10 pt-4">
+          <header className="flex items-baseline gap-2">
+            <h3 className="text-lg font-medium min-w-0 truncate">
               Technical Intern · CUNY – Queens College
             </h3>
-            <span className="text-sm text-gray-500">Jul–Sep 2024</span>
+            <span className="ml-auto text-xs font-medium tracking-wider text-gray-400 whitespace-nowrap">
+              Jul 2024 – Sep 2024
+            </span>
           </header>
-          <ul className="list-disc pl-5 mt-2 space-y-1">
+
+          <ul className="mt-2 max-w-[72ch] list-disc pl-5 space-y-2 leading-relaxed marker:text-gray-400">
             <li>
-              Designed responsive Figma mockups for a real‑estate platform;
-              translated to semantic HTML/CSS.
+              Designed <span className="font-semibold">responsive</span> Figma
+              mockups for a real-estate platform, enabling faster handoff and
+              fewer design revisions.
             </li>
             <li>
-              Worked in weekly reviews; participated in Agile sprints and design
-              critiques.
+              Participated in{" "}
+              <span className="font-semibold">Agile sprints</span> and weekly
+              design critiques, improving collaboration and delivery speed.
             </li>
           </ul>
         </article>
 
-        <article>
-          <header className="flex flex-wrap items-baseline gap-2">
-            <h3 className="text-lg font-medium">
+        <article className="pt-4">
+          <header className="flex items-baseline gap-2">
+            <h3 className="text-lg font-medium min-w-0 truncate">
               Software Engineer Fellow · CUNY Tech Prep
             </h3>
-            <span className="text-sm text-gray-500">Aug 2024–May 2025</span>
+            <span className="ml-auto text-xs font-medium tracking-wider text-gray-400 whitespace-nowrap">
+              Aug 2024 – May 2025
+            </span>
           </header>
-          <ul className="list-disc pl-5 mt-2 space-y-1">
+
+          <ul className="mt-2 max-w-[72ch] list-disc pl-5 space-y-2 leading-relaxed marker:text-gray-400">
             <li>
-              Full‑stack training with React/Node/JS; team projects with Git and
-              Agile.
+              Gained full-stack experience with{" "}
+              <span className="font-semibold">React</span>,{" "}
+              <span className="font-semibold">Node.js</span>, and modern{" "}
+              <span className="font-semibold">JavaScript</span> through an
+              intensive, project-based program.
             </li>
             <li>
-              Presented “CertGram” at the final showcase to 100+ attendees.
+              Presented “CertGram” to{" "}
+              <span className="font-semibold">100+ attendees</span>,
+              demonstrating a production-ready concert-matching platform.
             </li>
           </ul>
         </article>
       </div>
 
       {/* Education */}
-      <div className="space-y-4">
-        <h3 className="text-xl font-semibold">Education</h3>
-        <div>
-          <p className="font-medium">
-            CUNY – York College · B.S. Computer Science
+      <div className="space-y-4 mt-8">
+        <h1 className="text-lg uppercase tracking-wide text-blue-200">
+          Education
+        </h1>
+
+        <div className="first:border-t-0 border-t border-white/10 pt-4">
+          <header className="flex items-baseline gap-2">
+            <h4 className="font-medium min-w-0 truncate">
+              CUNY – York College · B.S. Computer Science
+            </h4>
+            <span className="ml-auto text-xs font-medium tracking-wider text-gray-400 whitespace-nowrap">
+              Aug 2021 – May 2025
+            </span>
+          </header>
+          <p className="text-sm text-gray-500 mt-1">
+            GPA 3.3 · Dean’s List 2023 · NSF S-STEM Scholar · ACE Scholar
           </p>
-          <p className="text-sm text-gray-600">
-            Aug 2021–May 2025 · GPA 3.3 · Dean’s List 2023 · NSF S‑STEM Scholar
-            · ACE Scholar
-          </p>
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-gray-500">
             Relevant: Algorithms & Data Structures, Software Dev, Principles of
             PL, Networking, Architecture
           </p>
         </div>
-        <div>
-          <p className="font-medium">
-            CUNY Tech Prep · Software Engineer Fellow
+
+        <article className="pt-4">
+          <header className="flex items-baseline gap-2">
+            <h4 className="font-medium min-w-0 truncate">
+              CUNY Tech Prep · Software Engineer Fellow
+            </h4>
+            <span className="ml-auto text-xs font-medium tracking-wider text-gray-400 whitespace-nowrap">
+              Jul 2024 – May 2025
+            </span>
+          </header>
+          <p className="text-sm text-gray-500 mt-1">
+            Modern full-stack (React/Node/JS), Agile, Git
           </p>
-          <p className="text-sm text-gray-600">
-            Aug 2024–May 2025 · Modern full‑stack (React/Node/JS), Agile, Git
-          </p>
-        </div>
+        </article>
       </div>
 
       {/* Skills */}
-      <div className="space-y-2">
-        <h3 className="text-xl font-semibold">Skills</h3>
-        <ul className="flex flex-wrap gap-2 text-sm">
-          {[
-            "JavaScript",
-            "C/C++",
-            "Node.js",
-            "React",
-            "Express",
-            "Vite",
-            "TailwindCSS",
-            "PostgreSQL",
-            "Supabase",
-            "SQL (basic)",
-            "Git",
-            "Figma",
-            "Neovim",
-            "Troubleshooting",
-            "Client Support",
-            "Agile",
-          ].map((s) => (
-            <li key={s} className="px-2 py-1 rounded border">
-              {s}
-            </li>
-          ))}
-        </ul>
-      </div>
 
-      {/* Resume link */}
-      <div className="pt-4">
-        <a
-          href="/Resume.pdf"
-          className="inline-flex items-center gap-2 border px-3 py-2 rounded"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View Resume (PDF)
-        </a>
+      {/* Skills */}
+      <div className="space-y-4 mt-8">
+        <h1 className="text-lg uppercase tracking-wide text-blue-200">
+          Skills
+        </h1>
+
+        <div className="first:border-t-0 border-t border-white/10 pt-4">
+          <SkillRow
+            label="Languages & Programming"
+            items={["JavaScript", "C/C++", "SQL (basic)"]}
+          />
+          <SkillRow
+            label="Frameworks & Libraries"
+            items={["React", "Node.js", "Express", "Vite", "TailwindCSS"]}
+          />
+          <SkillRow
+            label="Tools & Platforms"
+            items={["Git", "PostgreSQL", "Supabase", "Figma", "Neovim"]}
+          />
+          <SkillRow
+            label="Core Skills"
+            items={[
+              "Troubleshooting",
+              "Client Support",
+              "Agile",
+              "Teamwork",
+              "Communication",
+            ]}
+          />
+        </div>
+
+        {/* Divider below skills */}
+        <div className="border-t border-white/10 pt-4">
+          <a
+            href="/Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded border 
+                       border-white/20 bg-white/5 hover:bg-white/10 
+                       transition text-sm"
+          >
+            View Resume (PDF) ↗
+          </a>
+        </div>
       </div>
     </section>
+  );
+}
+
+function SkillRow({ label, items }) {
+  return (
+    <div className="py-3 flex items-start gap-4">
+      {/* fixed label column */}
+
+      <div className="w-56 shrink-0 text-sm text-gray-500 self-center">
+        {label}
+      </div>
+
+      {/* pills */}
+      <ul className="flex flex-wrap gap-2 text-sm">
+        {items.map((s) => (
+          <li
+            key={s}
+            className="px-2 py-1 rounded border border-white/20 bg-white/5
+                       hover:bg-white/10 transition"
+          >
+            {s}
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }
