@@ -22,6 +22,7 @@ export default function About() {
         tackling challenging problems and learning new technologies along the
         way.
       </p>
+
       <p className="text-slate-300 max-w-6xl mb-6">
         I have experience in various programming languages and frameworks,
         including JavaScript, React, Node.js. I specialize in web development
@@ -46,15 +47,20 @@ export default function About() {
         project, want to collaborate, or just want to say hi, feel free to reach
         out!
       </p>
+
       <p className="text-slate-300 mb-6">
         Keep scrolling to see some of my Experience, Projects, and Skills!
       </p>
-      <div className="h-96 bg-slate-800 my-8 rounded-lg flex items-center justify-center text-slate-200 text-xl p-8">
-        <div className="flex w-full max-w-4xl justify-between gap-8">
-          {/* Tech/Skills Column */}
-          <div className="flex-1 text-center">
-            <h3 className="text-lg font-bold mb-4 text-blue-300">Tech Stack</h3>
-            <div className="text-sm space-y-2">
+
+      {/* Info panel */}
+      <div className="my-8 rounded-lg border border-white/10 bg-white/5 p-4 sm:p-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 divide-y divide-white/10 sm:divide-y-0 sm:divide-x">
+          {/* Tech/Skills */}
+          <div className="pt-2 sm:pt-0 sm:pr-6 text-left">
+            <h3 className="text-base sm:text-lg font-bold mb-3 text-blue-300 text-center sm:text-left">
+              Tech Stack
+            </h3>
+            <div className="text-[13px] sm:text-sm space-y-2 text-slate-200 text-center sm:text-left">
               <p>
                 <span className="text-blue-200">Frontend:</span> React,
                 JavaScript, Tailwind
@@ -69,29 +75,29 @@ export default function About() {
             </div>
           </div>
 
-          {/* Current Projects Column */}
-          <div className="flex-1 text-center">
-            <h3 className="text-lg font-bold mb-4 text-blue-300">
+          {/* Currently Working On */}
+          <div className="pt-4 sm:pt-0 sm:px-6 text-left">
+            <h3 className="text-base sm:text-lg font-bold mb-3 text-blue-300 text-center sm:text-left">
               Currently Working On
             </h3>
-            <div className="text-sm space-y-2">
-              <p>🚀 This portfolio site</p>
-              <p>🤖 Exploring AI/ML integration</p>
-              <p>📚 Contributing to open source</p>
-              <p>💼 Job applications & LC prep</p>
-            </div>
+            <ul className="text-[13px] sm:text-sm space-y-2 text-slate-200 text-center sm:text-left">
+              <li>🚀 This portfolio site</li>
+              <li>🤖 Exploring AI/ML integration</li>
+              <li>📚 Contributing to open source</li>
+              <li>💼 Job applications &amp; LC prep</li>
+            </ul>
           </div>
 
-          {/* Quick Stats Column */}
-          <div className="flex-1 text-center">
-            <h3 className="text-lg font-bold mb-4 text-blue-300">
+          {/* Quick Stats */}
+          <div className="pt-4 sm:pt-0 sm:pl-6 text-left">
+            <h3 className="text-base sm:text-lg font-bold mb-3 text-blue-300 text-center sm:text-left">
               Quick Stats
             </h3>
-            <div className="text-sm space-y-2">
-              <p>☕ Coffee consumed: Too many</p>
-              <p>💻 Favorite editor: Neovim</p>
-              <p>📍 Based in: New York</p>
-            </div>
+            <ul className="text-[13px] sm:text-sm space-y-2 text-slate-200 text-center sm:text-left">
+              <li>☕ Coffee consumed: Too many</li>
+              <li>💻 Favorite editor: Neovim</li>
+              <li>📍 Based in: New York</li>
+            </ul>
           </div>
         </div>
       </div>

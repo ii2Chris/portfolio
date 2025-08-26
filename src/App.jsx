@@ -8,11 +8,11 @@ import Footer from "./components/Footer";
 
 export default function App() {
   return (
-    <main className="min-h-screen bg-[#0e1422] text-slate-200">
+    <main className="px-4 sm:px-6 lg:px-8 min-h-screen bg-[#0e1422] text-slate-200">
       <div className="md:grid md:grid-cols-[1fr_2fr]">
         {/* LEFT RAIL */}
 
-        <aside className="md:sticky md:top-0 md:h-screen p-8">
+        <aside className="md:sticky md:top-0 md:h-screen p-4 sm:p-6 md:p-8">
           {/* crisp line */}
           <div className="pointer-events-none absolute top-0 right-0.5 h-full w-[2px] bg-gradient-to-b from-transparent via-[#9daaf2] to-transparent opacity-90" />
           {/* soft glow halo */}
@@ -32,7 +32,10 @@ export default function App() {
         {/* RIGHT CONTENT */}
         <section className="blue-glow max-w-4xl mx-auto px-4 sm:px-6 font-mono">
           {/* About */}
-          <div id="about" className="py-24 space-y-8">
+          <div
+            id="about"
+            className="scroll-mt-24 sm:scroll-mt-28 py-16 sm:py-24 space-y-8"
+          >
             <h2 className="text-3xl font-semibold tracking-tight text-white scroll-mt-24">
               About Me
             </h2>
@@ -43,7 +46,10 @@ export default function App() {
           <div className="h-[2px] my-2 bg-gradient-to-r from-transparent via-[#9daaf2] to-transparent opacity-80" />
 
           {/* Experience */}
-          <div id="Experience" className="py-24 space-y-8">
+          <div
+            id="Experience"
+            className="scroll-mt-24 sm:scroll-mt-28 py-24 space-y-8"
+          >
             <h2 className="text-3xl font-semibold tracking-tight text-white scroll-mt-24">
               Experience
             </h2>
@@ -54,7 +60,10 @@ export default function App() {
           <div className="h-[2px] my-2 bg-gradient-to-r from-transparent via-[#9daaf2] to-transparent opacity-80" />
 
           {/* Projects */}
-          <div id="projects" className="py-24 space-y-8">
+          <div
+            id="projects"
+            className="scroll-mt-24 sm:scroll-mt-28 py-24 space-y-8"
+          >
             <h2 className="text-3xl font-semibold tracking-tight text-white scroll-mt-24">
               Projects
             </h2>
