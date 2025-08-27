@@ -15,7 +15,10 @@ export default function Projects() {
         "Client-side cache avoids refetch on tab switches.",
         "Route-level code splitting for faster initial load.",
       ],
-      links: { code: "https://github.com/ii2Chris/syncwave-final" },
+      links: {
+        live: "https://certgram.vercel.app/",
+        code: "https://github.com/ii2Chris/syncwave-final",
+      },
     },
 
     // 2) Reusable system (signals design/system thinking)
