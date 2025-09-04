@@ -32,7 +32,10 @@ export default function Projects() {
         "Clamp() typography for readable scaling.",
         "Docs and examples for common patterns.",
       ],
-      links: { code: "https://github.com/ii2Chris/Web-Design-1" },
+      links: {
+        live: "https://responsive-grid-layout-mu.vercel.app",
+        code: "https://github.com/ii2Chris/Web-Design-1",
+      },
     },
 
     // 3) Portfolio (production quality, shows craft)
@@ -46,36 +49,46 @@ export default function Projects() {
         "Semantic landmarks + basic SEO meta.",
         "Lazy-loaded images and explicit dimensions.",
       ],
-      links: { code: "https://github.com/ii2Chris/portfolio" },
+      links: {
+        live: "https://chrisbudhram.vercel.app/",
+        code: "https://github.com/ii2Chris/portfolio",
+      },
     },
 
-    // 4) CLI / CS fundamentals
-    //{
-    //id: "finance-manager",
-    //title: "Finance Manager (C++)",
-    //blurb: "CLI app to track accounts, transactions, and reports.",
-    //tech: ["C++", "OOP"],
-    //highlights: [
-    //"Clear domain objects: Accounts, Transactions, Reports.",
-    //"CSV import/export for quick data testing.",
-    //"Unit tests for core balance logic.",
-    //],
-    //links: { code: "#" },
-    //},
-    //
-    //// 5) Misc demos
-    //{
-    //id: "js-playground",
-    //title: "JS Playground",
-    //blurb: "Small utilities & UI widgets built for practice.",
-    //tech: ["JavaScript"],
-    //highlights: [
-    //"Debounce/throttle helpers + fetch wrappers.",
-    //"Micro-interactions for hover/focus states.",
-    //"Collection is organized and documented.",
-    //],
-    //links: { live: "#", code: "#" },
-    //},
+    // 4) Misc demos
+    {
+      id: "js-playground",
+      section: "JS Playground",
+      title: "JS Playground",
+      blurb: "Small utilities & UI widgets built for practice.",
+      tech: ["JavaScript"],
+      highlights: [
+        "Debounce/throttle helpers + fetch wrappers.",
+        "Micro-interactions for hover/focus states.",
+        "Collection is organized and documented.",
+      ],
+      links: {
+        code: "https://github.com/ii2Chris/javascript-playground",
+      },
+    },
+
+    // ————— Web UI Demos (full pages / mockups) —————
+    {
+      id: "pulseboard",
+      section: "Web UI Demos",
+      title: "PulseBoard — Patient Dashboard (UI Demo)",
+      blurb:
+        "Three-column desktop dashboard with BP trend chart, KPI cards, and profile/labs panels.",
+      tech: ["HTML", "CSS", "JavaScript", "Chart.js"],
+      highlights: [
+        "Desktop 3-column layout with sticky pill navbar.",
+        "KPI cards (respiratory rate, temperature, heart rate) from latest record.",
+        "Vanilla JS only (Chart.js via CDN); lightweight, framework-free build.",
+      ],
+      links: {
+        code: "https://github.com/ii2Chris/javascript-playground/tree/main/projects/pulseboard",
+      },
+    },
   ];
   // ─────────────────────────────────────────────────────────────────────────────
 
@@ -110,8 +123,8 @@ export default function Projects() {
     const container = trackRef.current;
     const card = cardRef.current;
     if (!container || !card) return;
-    const gap = 24; // gap-6 (keep in sync with class below)
-    const step = card.offsetWidth + gap;
+    const gap = 24; // gap-6
+    const step = card.offsetWidth + gap; // 480 + 24 by default
     container.scrollBy({ left: dir * step, behavior: "smooth" });
   };
 
@@ -136,12 +149,15 @@ export default function Projects() {
           disabled={atEnd}
         />
 
+        {/* TRACK: grid → equal heights via items-stretch */}
         <div
           ref={trackRef}
-          className="flex gap-6 overflow-hidden scroll-smooth"
+          className="grid grid-flow-col auto-cols-[480px] gap-6 items-stretch
+                     overflow-x-auto scroll-smooth"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           onWheel={(e) => e.preventDefault()}
         >
+          {/* hide webkit scrollbar */}
           <style>{`
             #projects::-webkit-scrollbar, 
             #projects div::-webkit-scrollbar { display: none; }
@@ -151,7 +167,7 @@ export default function Projects() {
             <div
               key={p.id}
               ref={i === 0 ? cardRef : null}
-              className="shrink-0 w-[480px]" // consistent width
+              className="h-full snap-start" // no fixed width needed; auto-cols handles it
             >
               <ProjectCard {...p} />
             </div>
@@ -189,13 +205,13 @@ function CarouselButton({ side = "left", onClick, disabled }) {
 function ProjectCard({ title, blurb, tech = [], highlights = [], links = {} }) {
   return (
     <article
-      className="group relative rounded-lg border border-white/10 p-5 
+      className="group relative h-full rounded-lg border border-white/10 p-5 
                  bg-transparent hover:bg-white/5 
                  hover:border-white/20 transition-all duration-200
-                 min-h-[260px] flex flex-col justify-between"
+                 flex flex-col" // fill column + vertical layout
     >
-      {/* TOP: Title, blurb, tech */}
-      <div>
+      {/* TOP: Title, blurb, tech + highlights area grows */}
+      <div className="flex-1 flex flex-col">
         <header className="space-y-1">
           <h3 className="text-base font-semibold text-gray-200 tracking-tight">
             {title}
@@ -206,9 +222,12 @@ function ProjectCard({ title, blurb, tech = [], highlights = [], links = {} }) {
           )}
         </header>
 
-        {/* HIGHLIGHTS */}
         {highlights.length > 0 && (
-          <ul className="mt-3 max-w-[68ch] list-disc pl-5 space-y-1 text-sm leading-relaxed marker:text-gray-500 text-gray-300">
+          <ul
+            className="mt-3 grow overflow-auto pr-1
+                         max-h-40 list-disc pl-5 space-y-1
+                         text-sm leading-relaxed text-gray-300 marker:text-gray-500"
+          >
             {highlights.map((h, i) => (
               <li key={i}>{h}</li>
             ))}
@@ -216,8 +235,8 @@ function ProjectCard({ title, blurb, tech = [], highlights = [], links = {} }) {
         )}
       </div>
 
-      {/* BOTTOM: Links */}
-      <div className="mt-4 flex flex-wrap gap-2">
+      {/* BOTTOM: Links pinned to bottom */}
+      <div className="pt-4 flex flex-wrap gap-2">
         {links.live && (
           <a
             href={links.live}
