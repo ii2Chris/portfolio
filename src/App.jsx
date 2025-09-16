@@ -13,11 +13,6 @@ export default function App() {
         {/* LEFT RAIL */}
 
         <aside className="md:sticky md:top-0 md:h-screen p-4 sm:p-6 md:p-8">
-          {/* crisp line */}
-          <div className="pointer-events-none absolute top-0 right-0.5 h-full w-[2px] bg-gradient-to-b from-transparent via-[#9daaf2] to-transparent opacity-90" />
-          {/* soft glow halo */}
-          <div className="pointer-events-none absolute top-0 right-0 h-full w-[8px] bg-[#9daaf2]/15 blur-sm" />
-
           <div className="flex h-full flex-col">
             <Title />
             <Navbar />
@@ -43,11 +38,11 @@ export default function App() {
           </div>
 
           {/* Divider */}
-          <div className="h-[2px] my-2 bg-gradient-to-r from-transparent via-[#9daaf2] to-transparent opacity-80" />
+          <div className="h-[2px] bg-gradient-to-r from-transparent via-[#9daaf2] to-transparent opacity-80" />
 
           {/* Experience */}
           <div
-            id="Experience"
+            id="experience"
             className="scroll-mt-24 sm:scroll-mt-28 py-24 space-y-8"
           >
             <h2 className="text-3xl font-semibold tracking-tight text-white scroll-mt-24">

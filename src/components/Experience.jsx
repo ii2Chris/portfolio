@@ -1,13 +1,6 @@
 export default function ExperienceSection() {
   return (
     <section id="experience" className="space-y-8">
-      {/* Heading */}
-      <header>
-        <p className="text-sm text-gray-500">
-          Internships, education, and skills at a glance
-        </p>
-      </header>
-
       {/* Experience */}
       <div className="space-y-6">
         <h1 className="text-lg uppercase tracking-wide text-blue-200">
@@ -26,14 +19,13 @@ export default function ExperienceSection() {
 
           <ul className="mt-2 max-w-[72ch] list-disc pl-5 space-y-2 leading-relaxed marker:text-gray-400">
             <li>
-              Designed <span className="font-semibold">responsive</span> Figma
-              mockups for a real-estate platform, enabling faster handoff and
-              fewer design revisions.
+              Built responsive Figma mockups for a real-estate platform and a
+              small component set (buttons, forms, cards) to speed up handoff to
+              engineering.
             </li>
             <li>
-              Participated in{" "}
-              <span className="font-semibold">Agile sprints</span> and weekly
-              design critiques, improving collaboration and delivery speed.
+              Participated in Agile sprints and weekly design critiques,
+              improving collaboration and delivery speed.
             </li>
           </ul>
         </article>
@@ -57,9 +49,8 @@ export default function ExperienceSection() {
               intensive, project-based program.
             </li>
             <li>
-              Presented “CertGram” to{" "}
-              <span className="font-semibold">100+ attendees</span>,
-              demonstrating a production-ready concert-matching platform.
+              Presented “CertGram” to 100+ attendees, demonstrating a
+              production-ready concert-matching platform.
             </li>
           </ul>
         </article>
@@ -84,8 +75,8 @@ export default function ExperienceSection() {
             GPA 3.3 · Dean’s List 2023 · NSF S-STEM Scholar · ACE Scholar
           </p>
           <p className="text-sm text-gray-500">
-            Relevant: Algorithms & Data Structures, Software Dev, Principles of
-            PL, Networking, Architecture
+            Relevant Coursework: Algorithms & Data Structures, Software Dev,
+            Principles of PL, Networking, Architecture
           </p>
         </div>
 
@@ -105,17 +96,15 @@ export default function ExperienceSection() {
       </div>
 
       {/* Skills */}
-
-      {/* Skills */}
       <div className="space-y-4 mt-8">
-        <h1 className="text-lg uppercase tracking-wide text-blue-200">
+        <h2 className="text-lg uppercase tracking-wide text-blue-200">
           Skills
-        </h1>
+        </h2>
 
         <div className="first:border-t-0 border-t border-white/10 pt-4">
           <SkillRow
-            label="Languages & Programming"
-            items={["JavaScript", "C/C++", "SQL (basic)"]}
+            label="Languages"
+            items={["JavaScript", "C/C++", "SQL", "Python"]}
           />
           <SkillRow
             label="Frameworks & Libraries"
@@ -123,29 +112,27 @@ export default function ExperienceSection() {
           />
           <SkillRow
             label="Tools & Platforms"
-            items={["Git", "PostgreSQL", "Supabase", "Figma", "Neovim"]}
-          />
-          <SkillRow
-            label="Core Skills"
             items={[
-              "Troubleshooting",
-              "Client Support",
-              "Agile",
-              "Teamwork",
-              "Communication",
+              "Git",
+              "GitHub",
+              "Linux",
+              "PostgreSQL",
+              "SQLite",
+              "Supabase",
+              "Docker",
+              "Vercel",
+              "Figma",
             ]}
           />
         </div>
-
         {/* Divider below skills */}
         <div className="border-t border-white/10 pt-4">
           <a
             href="/Resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded border 
-                       border-white/20 bg-white/5 hover:bg-white/10 
-                       transition text-sm"
+            className="inline-flex items-center gap-2 rounded border border-white/15 
+             px-3 py-1.5 text-sm hover:bg-white/10 transition"
           >
             View Resume (PDF) ↗
           </a>

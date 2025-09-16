@@ -42,7 +42,7 @@ export default function Projects() {
     {
       id: "portfolio",
       title: "Portfolio Website",
-      blurb: "This site — clean sections, smooth nav, consistent dividers.",
+      blurb: "This site",
       tech: ["React", "Vite", "Tailwind"],
       highlights: [
         "Sticky nav with active section highlight.",
@@ -52,41 +52,6 @@ export default function Projects() {
       links: {
         live: "https://chrisbudhram.vercel.app/",
         code: "https://github.com/ii2Chris/portfolio",
-      },
-    },
-
-    // 4) Misc demos
-    {
-      id: "js-playground",
-      section: "JS Playground",
-      title: "JS Playground",
-      blurb: "Small utilities & UI widgets built for practice.",
-      tech: ["JavaScript"],
-      highlights: [
-        "Debounce/throttle helpers + fetch wrappers.",
-        "Micro-interactions for hover/focus states.",
-        "Collection is organized and documented.",
-      ],
-      links: {
-        code: "https://github.com/ii2Chris/javascript-playground",
-      },
-    },
-
-    // ————— Web UI Demos (full pages / mockups) —————
-    {
-      id: "pulseboard",
-      section: "Web UI Demos",
-      title: "PulseBoard — Patient Dashboard (UI Demo)",
-      blurb:
-        "Three-column desktop dashboard with BP trend chart, KPI cards, and profile/labs panels.",
-      tech: ["HTML", "CSS", "JavaScript", "Chart.js"],
-      highlights: [
-        "Desktop 3-column layout with sticky pill navbar.",
-        "KPI cards (respiratory rate, temperature, heart rate) from latest record.",
-        "Vanilla JS only (Chart.js via CDN); lightweight, framework-free build.",
-      ],
-      links: {
-        code: "https://github.com/ii2Chris/javascript-playground/tree/main/projects/pulseboard",
       },
     },
   ];
@@ -131,9 +96,6 @@ export default function Projects() {
   return (
     <section id="projects" className="space-y-6">
       <header className="space-y-1">
-        <h1 className="text-lg uppercase tracking-wide text-blue-200">
-          Projects
-        </h1>
         <p className="text-sm text-gray-500">Use the arrows to browse</p>
       </header>
 
@@ -206,9 +168,8 @@ function ProjectCard({ title, blurb, tech = [], highlights = [], links = {} }) {
   return (
     <article
       className="group relative h-full rounded-lg border border-white/10 p-5 
-                 bg-transparent hover:bg-white/5 
-                 hover:border-white/20 transition-all duration-200
-                 flex flex-col" // fill column + vertical layout
+             bg-[#0f1629]  
+             transition-all duration-150 flex flex-col"
     >
       {/* TOP: Title, blurb, tech + highlights area grows */}
       <div className="flex-1 flex flex-col">
