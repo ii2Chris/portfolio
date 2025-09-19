@@ -17,7 +17,7 @@ export default function About() {
       </p>
 
       <p className="text-slate-300 max-w-6xl mb-6">
-        I'm current a recent graduate looking for my first role as a Software
+        As a recent graduate, I'm looking for my first role as a Software
         Engineer. I have a strong foundation in computer science and a passion
         for technology. I am eager to apply my skills and knowledge to
         real-world problems and contribute to a dynamic team.
@@ -31,7 +31,7 @@ export default function About() {
 
       <p className="text-slate-300 mb-6">
         Scroll to see my experience and projects. If something stands out, I’m
-        happy to chat, my contact is on the left! (or up top on mobile).
+        happy to chat, my contact info is on the left! (or up top on mobile).
       </p>
     </div>
   );
