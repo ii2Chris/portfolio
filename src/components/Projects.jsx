@@ -54,6 +54,23 @@ export default function Projects() {
         code: "https://github.com/ii2Chris/portfolio",
       },
     },
+
+    // 4) Fun side Project
+
+    {
+      id: "Asteroid Game",
+      title: "Pygame Asteroid",
+      blurb:
+        "A modular, object-oriented clone of the classic Asteroids arcade game built with Python and Pygame.",
+      tech: ["Python", "Pygame", "OOP"],
+      highlights: [
+        "Used sprite groups for modular updates, collisions, and rendering.",
+        "Added asteroid splitting, shooting cooldown, and object lifecycle management.",
+      ],
+      links: {
+        code: "https://github.com/ii2Chris/Aestroid-Game",
+      },
+    },
   ];
   // ─────────────────────────────────────────────────────────────────────────────
 
