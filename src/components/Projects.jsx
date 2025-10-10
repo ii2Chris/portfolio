@@ -71,6 +71,23 @@ export default function Projects() {
         code: "https://github.com/ii2Chris/Aestroid-Game",
       },
     },
+
+    // 5) fun side Project
+    {
+      id: "Ai-Agent",
+      title: "AI Agent",
+      blurb:
+        "A simple AI agent built with Python that uses google genai to interact with local files.",
+      tech: ["Python", "AI", "Google GenAI"],
+      highlights: [
+        "Implementing a simple AI agent using Google GenAI API.",
+        "Agent can read, write, and modify local files based on user prompts.",
+        "Demonstrates basic AI capabilities and file manipulation.",
+      ],
+      links: {
+        code: "https://github.com/ii2Chris/ai-agent",
+      },
+    },
   ];
   // ─────────────────────────────────────────────────────────────────────────────
 
